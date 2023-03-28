@@ -91,3 +91,7 @@ TrafficLight::LIGHT_STATE TrafficLight::nextState()
     //Return the current state (for information)
     return State; 
 } 
+
+   void TrafficLight::stop(){
+        State = STOP;
+    }

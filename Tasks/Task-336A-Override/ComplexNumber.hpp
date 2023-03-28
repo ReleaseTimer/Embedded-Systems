@@ -64,7 +64,9 @@ public:
         ComplexNumber result;
 
         //TO BE DONE
-
+        result = *this;
+        DoubleNumber::operator+(u);
+        result += u.realPart().getValue();
         return result;
     }
 };

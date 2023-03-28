@@ -1,7 +1,7 @@
 #include "uop_msb.h"
 using namespace uop_msb;
 
-#define WAIT_TIME_MS 500 
+#define WAIT_TIME_MS 1000 
 
 DigitalOut red(TRAF_RED1_PIN,1);         //Note the initial state
 DigitalOut amber(TRAF_YEL1_PIN,0);
@@ -30,7 +30,9 @@ int main()
     while (true)
     {
         red = !red;
+        wait_us(WAIT_TIME_MS * 1000);
         amber = !amber;
+        wait_us(2000 * 1000);
         green = !green;
         wait_us(WAIT_TIME_MS * 1000);
     }

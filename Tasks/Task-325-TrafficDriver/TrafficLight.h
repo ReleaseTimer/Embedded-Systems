@@ -23,6 +23,11 @@ class TrafficLight
     void yellowFlashISR();
     void flashYellow(bool flash);
     void updateOutput();
+    
+    public:
+    void stop();
+    void setFlashSpeed(double);
+    double getFlashSpeed();
 
     public:
     //Constructor

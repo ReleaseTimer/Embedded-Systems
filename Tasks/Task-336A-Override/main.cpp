@@ -8,7 +8,7 @@ int main()
     DoubleNumber  d0(3.0);
     ComplexNumber c1;
     DoubleNumber  d1;
-    
+    ComplexNumber c2;
     //This uses the operator= function
     d1 = 5.0;
 
@@ -17,9 +17,9 @@ int main()
 
     //Now overrides the default =
     c1 = c0;
-
+    c2 = c1 + c0;
     //Now overrides the parent asString
-    cout << c1.asString() << endl;
+    cout << c2.asString() << endl;
 
     //Challenge - try and understand this ;)
     cout << c1.asDoubleNumber().asString() << endl;

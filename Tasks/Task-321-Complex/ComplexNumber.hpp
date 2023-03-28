@@ -77,7 +77,30 @@ public:
         cout << this->real << " + " << this->imag << "j" << endl;
     }
     
+    void subtract(const ComplexNumber& c)
+    {
+        this->imag -= c.imag;
+        this->real -= c.real;
+    }
+
+    ComplexNumber subtractFrom(const ComplexNumber& c)
+    {
+        return ComplexNumber(this->real-c.real, this->imag-c.imag);
+    }
+
+    void multiply(ComplexNumber& c)
+    {
+        this->real *= c.real;
+        this->imag *= c.imag;
+    }
+
+    ComplexNumber multiplyWith(const ComplexNumber& c)
+    {
+        return ComplexNumber(this->real*c.real, this->imag*c.imag);
+    }
 };
+
+
 
 
 #endif /* ComplexNumber_hpp */

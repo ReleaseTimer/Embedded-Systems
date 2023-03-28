@@ -39,6 +39,8 @@ int main()
     {
         //Toggle the LED
         ledBlue = !ledBlue;
+        ledGreen = !ledGreen;
+        ledRed = !ledRed;
 
         //Add 1 to the counter "variable"
         counter = counter + 1;
